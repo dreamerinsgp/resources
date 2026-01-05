@@ -1,0 +1,24 @@
+# SSH Implementation Project Rules
+
+## Project Context
+This is an educational SSH server and client implementation in Rust demonstrating all 6 phases of SSH connection establishment.
+
+## Key Information
+- Default user: testuser
+- Default password: testpass
+- Default port: 2222
+- Keys stored in: ~/.ssh_edu/
+
+## Common Tasks
+- To run server: `cargo run -- server`
+- To run client: `cargo run -- client --host localhost --port 2222 --user testuser`
+- Password for testuser: testpass
+
+## Architecture
+- Phase 1: TCP Connection (server/tcp.rs, client/connection.rs)
+- Phase 2: Protocol Version Exchange (protocol/version.rs)
+- Phase 3: Key Exchange (protocol/key_exchange.rs, crypto/dh.rs)
+- Phase 4: Server Authentication (protocol/server_auth.rs)
+- Phase 5: Client Authentication (protocol/client_auth.rs)
+- Phase 6: Session Establishment (protocol/session.rs, crypto/encryption.rs)
+
